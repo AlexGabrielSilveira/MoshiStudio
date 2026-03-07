@@ -1,0 +1,32 @@
+.siteShell {
+  padding: clamp(1rem, 3vw, 2.6rem) clamp(0.9rem, 2.4vw, 2.2rem);
+}
+
+.pageContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 12px solid #2b2c31;
+  border-radius: var(--radius-frame);
+  box-shadow: 0 24px 45px var(--color-shadow);
+  padding: clamp(0.95rem, 2.2vw, 1.6rem);
+  position: relative;
+  font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
+}
+
+.pageContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(21, 22, 25, 0.06) 1px, transparent 1px);
+  background-size: 100% 3px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@media (max-width: 680px) {
+  .pageContainer {
+    border-width: 9px;
+    border-radius: 14px;
+  }
+}

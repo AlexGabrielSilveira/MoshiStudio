@@ -1,0 +1,28 @@
+.contentSection {
+  position: relative;
+  z-index: 1;
+  padding: 0.9rem 0 0.35rem;
+}
+
+.questPanel {
+  margin-top: 0.85rem;
+  border: 2px solid var(--color-border-soft);
+  background: var(--color-surface-deep);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18);
+  padding: clamp(0.85rem, 1.4vw, 1.35rem);
+}
+
+.questPanel p {
+  margin: 0;
+  font-size: clamp(0.92rem, 1.25vw, 1.28rem);
+  color: var(--color-ink-soft);
+}
+
+.questPanel p + p {
+  margin-top: 0.55rem;
+}
+
+.accent {
+  color: var(--color-accent);
+  font-family: var(--font-display), monospace;
+}

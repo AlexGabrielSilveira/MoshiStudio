@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.2rem;
+  padding: 1.5rem 0;
+}
+
+.levelTag {
+  margin: 0;
+  color: var(--color-accent);
+  font-family: var(--font-display), monospace;
+  font-size: clamp(0.45rem, 0.8vw, 0.62rem);
+}
+
+.heroTitle {
+  font-family: var(--font-display), monospace;
+  font-size: clamp(1rem, 4.2vw, 2.4rem);
+  line-height: 1.06;
+  margin: 0.45rem 0 0.75rem;
+  letter-spacing: 0.035em;
+}
+
+.heroDescription {
+  margin: 0;
+  max-width: 38ch;
+  color: var(--color-ink-soft);
+  font-size: clamp(0.92rem, 1.45vw, 1.45rem);
+}
+
+.heroActions {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.btn {
+  border: 3px solid var(--color-border);
+  padding: 0.7rem 1rem;
+  font-family: var(--font-display), monospace;
+  font-size: 0.62rem;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-border);
+}
+
+.btnPrimary {
+  background: var(--color-accent);
+  color: #fff8fa;
+}
+
+.btnSecondary {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.heroMedia {
+  display: grid;
+  place-items: center;
+}
+
+.heroPhotoFrame {
+  background: #f0efe9;
+  border: 2px solid #c5c3b4;
+  padding: 0.65rem;
+  transform: rotate(1.8deg);
+  box-shadow: 8px 8px 0 rgba(25, 26, 30, 0.16);
+}
+
+.heroPhoto {
+  width: min(100%, 320px);
+  min-height: 250px;
+  border: 3px solid #7c8590;
+  background:
+    linear-gradient(155deg, rgba(60, 88, 103, 0.95), rgba(15, 25, 36, 0.8)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  color: #ffe07f;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display), monospace;
+  font-size: clamp(0.5rem, 0.82vw, 0.68rem);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroMedia {
+    justify-items: start;
+  }
+}
